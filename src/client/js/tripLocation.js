@@ -5,7 +5,7 @@ const username = 'gabbaborjaa';
  * 
  * @param {*} City 
  * 
- * @returns City Name & Weather
+ * @returns City Name & Location
  */
 
 export async function getGeoCity(city) {
