@@ -1,3 +1,5 @@
+import { response } from "express";
+
 // API URL & Key
 const geonameUrl = 'http://api.geonames.org/searchJSON?q=';
 const username = 'gabbaborjaa';
@@ -10,6 +12,13 @@ const username = 'gabbaborjaa';
 
 export async function getGeoCity(city) {
     const dataUrl = `${geonameUrl}` + city + '&username=' + username
+        // try {
+        //     const data = await response.json();
+        //     console.log(data);
+        //     res.send(data);
+        // } catch (error) {
+        //     console.log(error)
+        // }
     try {
         const res = await fetch(dataUrl);
         if (res.ok) {
