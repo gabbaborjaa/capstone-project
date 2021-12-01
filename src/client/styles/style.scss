@@ -65,8 +65,10 @@
     }
     /* Styling for Text Areas */
     
-    .myInput {
-        text-align: center;
+    textarea {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     /*  Basic Styling To Override Default For Basic HTML Elements */
     
@@ -95,9 +97,6 @@
         font-family: 'Source Serif Pro', sans-serif;
         border: none;
         box-shadow: 2px 2px 4px #444;
-        .grabbing {
-            cursor: grabbing;
-        }
     }
     
     h1 {
