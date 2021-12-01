@@ -1,0 +1,46 @@
+{
+    "name": "capstone-project",
+    "version": "1.0.0",
+    "description": "Travel Application that dictates the weather and location of desired destination in travel",
+    "main": "server.js",
+    "scripts": {
+        "start": "node src/server/server.js",
+        "build-prod": "webpack --config webpack.prod.js",
+        "build-dev": "webpack serve --config webpack.dev.js --open",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gabbaborjaa/capstone-project.git"
+    },
+    "author": "Gabriel Borja",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gabbaborjaa/capstone-project/issues"
+    },
+    "homepage": "https://github.com/gabbaborjaa/capstone-project#readme",
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-loader": "^8.2.3",
+        "clean-webpack-plugin": "^4.0.0",
+        "css-loader": "^6.5.1",
+        "css-minimizer-webpack-plugin": "^3.1.3",
+        "dotenv-webpack": "^7.0.3",
+        "file-loader": "^6.2.0",
+        "html-loader": "^3.0.1",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.4.4",
+        "node-sass": "^6.0.1",
+        "sass-loader": "^12.3.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.64.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.4.0",
+        "workbox-webpack-plugin": "^6.3.0"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+    }
+}

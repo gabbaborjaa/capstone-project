@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet"> -->
+    <title> Capstone Travel App </title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="title"> Travel </div>
+        <div> For all your travel details and information!</div>
+        <div class="city">
+            <label for="city">Enter your destination here!</label>
+            <br>
+            <input type="text" id="city" placeholder="Los Angeles">
+        </div>
+        <br>
+        <div class="holder feel">
+            <label for="date">When are you leaving?</label>
+            <br>
+            <textarea class="myInput" id="departureDate" placeholder="Month Day, Year"></textarea>
+            <br>
+            <button id="generate"> Submit </button>
+        </div>
+        <div class="results">
+        </div>
+        <div class="Trips">
+            <h1> My Trips</h1>
+            <ul> </ul>
+            <div id="entryHolder">
+                <div id="destination-container">
+                    <div id="dest"></div>
+                </div>
+                <div id="temp-container">
+                    <div id="lat"></div>
+                </div>
+                <div id="content-container">
+                    <div id="lng"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h6>Project created by Gabriel Borja. &copy;</h6>
+        </footer>
+
+    </div>
+</body>
+
+</html>
