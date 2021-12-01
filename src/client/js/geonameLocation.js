@@ -1,5 +1,5 @@
 // API URL & Key
-const geonameUrl = 'http://api.geonames.org/';
+const geonameUrl = 'http://api.geonames.org/searchJSON?q=';
 const username = 'gabbaborjaa';
 /**
  * 
@@ -9,7 +9,7 @@ const username = 'gabbaborjaa';
  */
 
 export async function getGeoCity(city) {
-    const dataUrl = 'http://api.geonames.org/searchJSON?q=' + city + 'username=' + username
+    const dataUrl = `${geonameUrl}` + city + '&username=' + username
     try {
         const res = await fetch(dataUrl);
         if (res.ok) {
