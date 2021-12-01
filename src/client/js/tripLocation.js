@@ -1,4 +1,4 @@
-// API Details
+// API URL & Key
 const geonameUrl = 'http://api.geonames.org/';
 const username = 'gabbaborjaa';
 /**

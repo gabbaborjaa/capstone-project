@@ -1,4 +1,4 @@
-// API Details // 
+// API URL & Key // 
 const weatherbitUrl = 'https://api.weatherbit.io/v2.0/current';
 const weatherbitApi = '4e5f8ac1e15047d6aac9f136cfe47d89';
 
