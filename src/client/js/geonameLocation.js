@@ -27,4 +27,3 @@ export async function getGeoCity(city) {
         console.log(error);
     }
 }
-document.getElementById("generate").addEventListener("click", getGeoCity);
