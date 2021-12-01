@@ -5,6 +5,7 @@ const calculateDaysToGo = (futureDate) => {
     let daysToGo = new Date(differenceInDays) / (24 * 3600 * 1000);
     daysToGo = Number(Math.round(daysToGo));
     return daysToGo;
+
 };
 
 export { calculateDaysToGo };
