@@ -1,7 +1,7 @@
 import { response } from "express";
 
 // API URL & Key
-const geonameUrl = 'http://api.geonames.org/searchJSON?q=';
+const geonameUrl = 'http://api.geonames.org/search?q=';
 const username = 'gabbaborjaa';
 /**
  * 
