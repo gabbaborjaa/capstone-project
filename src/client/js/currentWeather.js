@@ -10,15 +10,15 @@ let dateToday = new Date().toLocaleDateString('en-US');
 
 /**
  * 
- * @param {*} destination = destination
+ * @param {*} City 
  * 
  * @returns weather data
  * 
  */
 
-async function getWeatherData(destination) {
+async function getWeatherData(city) {
     try {
-        const response = await fetch(`${weatherbitUrl}&city=${destination}&key=${weatherbitApi}`);
+        const response = await fetch(`${weatherbitUrl}&city=${city}&key=${weatherbitApi}`);
         const data = await response.json();
 
         if (data.cod != 200) {
