@@ -36,5 +36,3 @@ export async function getGeoCity(city) {
         console.log(error);
     }
 }
-
-export { getGeoCity };
