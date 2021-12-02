@@ -1,14 +1,5 @@
-// import { getGeoCity } from './js/geonameLocation.js';
-import { calculateDaysToGo } from './js/tripCountdown.js';
+import './styles/style.scss'
 
-// Imported Styles
-import './styles/style.scss';
+// import { getGeoCity } from './js/geoLocation.js'
 
-
-export {
-    calculateDaysToGo,
-    // getGeoCity
-};
-
-// Event Listeners
-document.getElementById("generate").addEventListener("click", getGeoCity);
+// export { getGeoCity };
