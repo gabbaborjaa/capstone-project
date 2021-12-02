@@ -1,18 +1,22 @@
-# Udacity Capstone Project #
-
+# Udacity Travel Application #
 ## Description ##
+
+Capstone Project for Udacity Front-End Web Development Nanodegree Program
 
 A travel application that helps users see the weather of their destination as well as the date of travel.
 
 
-## Version 2.55 ##
+## Version 2.57 ##
 
 Final project consists of all skills learned through the Nanodegree Program in Udacity.
 
-Project consists of API's from Geonames, Weatherbit, and Pixabay.
-
 This projects uses Node.js, Express, Webpack, Sass, & more. 
 
+# API's Used
+
+* Pixabay
+* Weatherbit
+* Geonames
 
 # Project Build
 
