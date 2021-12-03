@@ -13,17 +13,16 @@
 
 <body>
     <div id="app">
-        <h1> Travel </h1>
-        <div> For all your travel details and information!</div>
-        <div class="city">
-            <label for="city">Enter your destination here!</label>
-            <br>
-            <textarea type="text" id="destination" placeholder="Los Angeles"></textarea>
+        <div class="title"> Travel </div>
+        <div class="subtitle"> For all your travel details and information!</div>
+        <div class="destination">
+            <label for="city">Where are you going?</label>
+            <!-- <br> -->
+            <input type="text" id="destination" placeholder="Enter a city name">
         </div>
         <br>
         <div class="holder date">
             <label class="date">When are you leaving?</label>
-            <br>
             <input type="date" id="date" placeholder="December 25, 2021"></input>
             <br>
             <button id="generate"> Submit </button>
