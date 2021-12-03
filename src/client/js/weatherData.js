@@ -1,7 +1,3 @@
-import numeral, { validate } from "numeral";
-import { format } from "date-fns";
-import parseISO from 'date-fns/parseISO';
-
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
 const API_KEY = process.env.WEATHERBIT_KEY;
 
@@ -112,7 +108,7 @@ function getWeatherData() {
         alert(error);
     }
 }
-
+// create event listener for the sumbit button 
 document.getElementById("generate").addEventListener("click", getWeatherData);
 
 export { getWeatherData }
