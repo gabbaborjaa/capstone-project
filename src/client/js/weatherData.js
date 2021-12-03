@@ -62,12 +62,13 @@ async function fetchWeatherData(input) {
  * @param {*} results data from api.weatherbit.io service
  */
 async function updateUI(data) {
+    //
 
     try {
         document.getElementById("weather").innerHTML = data.weatherbit[0].temp;
 
     } catch (error) {
-
+        // Throw error if needed
         throw error;
     }
 }
