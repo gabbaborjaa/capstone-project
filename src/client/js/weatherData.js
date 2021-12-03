@@ -34,7 +34,7 @@ async function fetchWeatherData(input) {
 
             const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely`;
 
-            const response = await fetch(`${PARAM_URL}, fetchRequestOptions`);
+            const response = await fetch(`${PARAM_URL}`);
 
             if (!response.ok) {
 
@@ -63,7 +63,7 @@ async function fetchWeatherData(input) {
 async function updateUI(data) {
 
     try {
-        document.getElementById("weather").innerHTML = data.weatherbit.temp;
+        document.getElementById("weather").innerHTML = data.weatherbit[0].temp;
 
     } catch (error) {
 
