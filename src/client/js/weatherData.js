@@ -3,7 +3,7 @@ import { format } from "date-fns";
 import parseISO from 'date-fns/parseISO';
 
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
-const API_KEY = proces.env.WEATHERBIT_KEY;
+const API_KEY = process.env.WEATHERBIT_KEY;
 
 /**
  * Validate the input text.
@@ -38,7 +38,7 @@ async function fetchWeatherData(input) {
 
             const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely`;
 
-            const response = await fetch(`${PARAM_URL}`);
+            const response = await fetch(`${PARAM_URL}, fetchRequestOptions`);
 
             if (!response.ok) {
 
@@ -48,6 +48,7 @@ async function fetchWeatherData(input) {
             const data = await response.json();
 
             return data;
+
         } catch (error) {
 
             throw error;
@@ -67,6 +68,7 @@ async function updateUI(data) {
 
     try {
         document.getElementById("weather").innerHTML = data.weatherbit.temp;
+
     } catch (error) {
 
         throw error;
@@ -77,7 +79,6 @@ async function updateUI(data) {
  * 
  * 
  */
-
 function getWeatherData() {
 
     const input = document.getElemenyById("destination").value;
@@ -111,3 +112,7 @@ function getWeatherData() {
         alert(error);
     }
 }
+
+document.getElementById("generate").addEventListener("click", getWeatherData);
+
+export { getWeatherData }
