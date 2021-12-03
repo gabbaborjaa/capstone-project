@@ -1,7 +1,8 @@
 /**
  * 
  * @param {*} futureDate 
- * @returns 
+ * 
+ * @returns date countdown
  */
 
 // Pass in a date in the future
@@ -16,3 +17,5 @@ const calculateDaysToGo = (futureDate) => {
 };
 
 document.getElementById("generate").addEventListener("click", calculateDaysToGo);
+
+export { calculateDaysToGo }
