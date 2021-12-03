@@ -75,10 +75,10 @@ module.exports = {
         // generate the service worker file
         // NOTE: use this plugin only in production mode - Service Worker requires HTTPS/secure connection
         new GenerateSW({
-            // tell the service worker to start controlling any existing clients as soon as it activates
+            // these options encourage the ServiceWorkers to get in there fast
+            // and not allow any straggling "old" SWs to hang around
             clientsClaim: true,
-            // add an unconditional call now, rather than later, to skipWaiting() to the generated service worker
-            skipWaiting: true
-        })
+            skipWaiting: true,
+        }),
     ]
 }
