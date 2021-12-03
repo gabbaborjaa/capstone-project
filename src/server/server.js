@@ -28,17 +28,17 @@ function getData(req, res) {
     res.status(200).send(projectData);
 }
 
-/**
- * Post weather service response data.
- * 
- * @param {*} req request
- * @param {*} res response data
- */
-function postData(req, res) {
-    projectData = req.body;
-    console.log(projectData);
-    res.status(200).send(projectData);
-}
+// /**
+//  * Post weather service response data.
+//  * 
+//  * @param {*} req request
+//  * @param {*} res response data
+//  */
+// function postData(req, res) {
+//     projectData = req.body;
+//     console.log(projectData);
+//     res.status(200).send(projectData);
+// }
 
 
 app.use(bodyParser.json());
