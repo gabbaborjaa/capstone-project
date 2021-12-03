@@ -1,6 +1,7 @@
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
 const API_KEY = process.env.WEATHERBIT_KEY;
 
+const unit = '&units=I';
 /**
  * Validate the input text.
  * 
@@ -32,7 +33,7 @@ async function fetchWeatherData(input) {
 
         try {
 
-            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely`;
+            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely${unit}`;
 
             const response = await fetch(`${PARAM_URL}`);
 
