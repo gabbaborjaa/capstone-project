@@ -10,4 +10,6 @@ const API_URL = ``;
  * 
  * 
  */
-function validateInput(input) {}
+async function getWeatherData(input) {
+
+}
