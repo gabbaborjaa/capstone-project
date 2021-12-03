@@ -17,7 +17,7 @@ module.exports = {
     stats: 'verbose',
     // webpack dev server configuration
     devServer: {
-        port: 6050, //9050,
+        port: 6050,
         static: {
             directory: path.resolve(__dirname, './dist-dev')
         },
