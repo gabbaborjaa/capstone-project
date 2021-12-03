@@ -1,21 +1,28 @@
 /**
  * 
- * @param {*} futureDate 
+ * @param {*} date
  * 
  * @returns date countdown
  */
 
 // Pass in a date in the future
 // this function will return the difference in number of days from the current date to the future date
-const calculateDaysToGo = (futureDate) => {
-    const timerDetails = document.querySelector('departure')
-    const differenceInDays = new Date(futureDate) - new Date();
-    let daysToGo = new Date(differenceInDays) / (24 * 3600 * 1000);
-    daysToGo = Number(Math.round(daysToGo));
-    return daysToGo;
+const tripCountdown = (date) => {
 
-};
+    const timerDetails = document.getElementById('timer');
 
-document.getElementById("generate").addEventListener("click", calculateDaysToGo);
+    const now = new Date();
+    const difference = Date.parse(to) - Date.parse(now);
 
-export { calculateDaysToGo }
+    //Time Calculation gotten from Sitepoint (https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/)
+    const minutes = Math.floor((difference / 1000 / 60) % 60);
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+
+    timerDetails.innerHTML = `
+    Your trip is ${days} <span class="bold">Days </span> ${hours} <span class="bold">Hours</span> ${minutes} <span class="bold">Minutes</span> away!`;
+
+}
+
+export { tripCountdown }

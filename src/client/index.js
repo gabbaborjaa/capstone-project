@@ -1,5 +1,5 @@
 import './js/geoLocation.js'
-import './js/weatherData.js'
+// import './js/weatherData.js'
 import './js/tripCountdown.js'
 
 
