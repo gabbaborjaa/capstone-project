@@ -1,3 +1,5 @@
+const API_URL = ``;
+
 /**
  * Validate the input text.
  * 
