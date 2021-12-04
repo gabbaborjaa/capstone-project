@@ -12,7 +12,7 @@ const tripCountdown = (date) => {
     const timerDetails = document.getElementById('timer');
 
     const now = new Date();
-    const difference = Date.parse(to) - Date.parse(now);
+    const difference = Date.parse(date) - Date.parse(now);
 
     //Time Calculation gotten from Sitepoint (https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/)
     const minutes = Math.floor((difference / 1000 / 60) % 60);
@@ -24,5 +24,17 @@ const tripCountdown = (date) => {
     Your trip is ${days} <span class="bold">Days </span> ${hours} <span class="bold">Hours</span> ${minutes} <span class="bold">Minutes</span> away!`;
 
 }
+
+const updateUI = (date) => {
+    const departureDetails = document.querySelector('.timer');
+
+    departureDetails.innerHTML = date;
+
+    return;
+}
+
+// create event listener for the "let's go" button 
+
+document.getElementById("generate").addEventListener("click", tripCountdown);
 
 export { tripCountdown }
