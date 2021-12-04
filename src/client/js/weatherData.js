@@ -64,7 +64,7 @@ async function updateUI(data) {
     //
 
     try {
-        document.getElementById("weather").innerHTML = data.weather;
+        document.getElementById("weather").innerHTML = data;
 
     } catch (error) {
         // Throw error if needed
