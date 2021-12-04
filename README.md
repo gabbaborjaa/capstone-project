@@ -1,4 +1,4 @@
-# Udacity Travel Application ✈️✈️ #
+# Udacity Travel Application ✈️ #
 ## Description ##
 
 Capstone Project for Udacity Front-End Web Development Nanodegree Program
