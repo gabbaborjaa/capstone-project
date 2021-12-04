@@ -19,22 +19,22 @@ const tripCountdown = (date) => {
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-
+    // Have the description show up with the countdown in the sentence.
     timerDetails.innerHTML = `
     Your trip is ${days} <span class="bold">Days </span> ${hours} <span class="bold">Hours</span> ${minutes} <span class="bold">Minutes</span> away!`;
 
 }
 
+// Show the countdown on the UI
 const updateUI = (date) => {
     const departureDetails = document.querySelector('.timer');
 
     departureDetails.innerHTML = date;
 
-    return;
+    return data;
 }
 
 // create event listener for the "let's go" button 
-
 document.getElementById("generate").addEventListener("click", tripCountdown);
 
 export { tripCountdown }
