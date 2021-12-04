@@ -1,7 +1,6 @@
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
 const API_KEY = '08982352a66d46d5b0bbd4919b860415';
 
-const unit = '&units=I';
 /**
  * Validate the input text.
  * 
@@ -33,7 +32,7 @@ async function fetchWeatherData(input) {
 
         try {
 
-            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely${unit}`;
+            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely`;
 
             const response = await fetch(`${PARAM_URL}`);
 
@@ -65,7 +64,7 @@ async function updateUI(data) {
     //
 
     try {
-        document.getElementById("weather").innerHTML = data.app_temp;
+        document.getElementById("weather").innerHTML = data;
 
     } catch (error) {
         // Throw error if needed
@@ -93,7 +92,7 @@ function getWeatherData() {
             fetchWeatherData(input)
                 .then((data) => {
                     if (data) {
-                        // response data from the geonames.org service is not null, so update the UI
+                        // response data from the weatherbit service is not null, so update the UI
                         updateUI(data);
                     }
                 })
