@@ -1,5 +1,5 @@
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
-const API_KEY = process.env.WEATHERBIT_KEY;
+const API_KEY = '08982352a66d46d5b0bbd4919b860415';
 
 const unit = '&units=I';
 /**
@@ -65,7 +65,7 @@ async function updateUI(data) {
     //
 
     try {
-        document.getElementById("weather").innerHTML = data.weatherbit[0].temp;
+        document.getElementById("weather").innerHTML = data.name;
 
     } catch (error) {
         // Throw error if needed
@@ -79,7 +79,7 @@ async function updateUI(data) {
  */
 function getWeatherData() {
 
-    const input = document.getElemenyById("destination").value;
+    const input = document.getElementById("destination").value;
 
     try {
         // validate the input text (i.e., not nul and not empty)
