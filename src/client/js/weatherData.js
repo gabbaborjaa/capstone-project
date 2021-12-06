@@ -120,7 +120,7 @@ function getWeatherData() {
         alert(error);
     }
 }
-// create event listener for the sumbit button 
+// create event listener for the submit button 
 document.getElementById("generate").addEventListener("click", getWeatherData);
 
 export { getWeatherData }
