@@ -29,6 +29,7 @@ function validateInput(input) {
  * @returns weather data
  */
 async function fetchWeatherData(input) {
+
     const isInputValid = validateInput(input);
 
     if (isInputValid) {
@@ -76,7 +77,6 @@ async function updateUI(data) {
         document.getElementById("weather").innerHTML = `${weatherData} ${metricSign}`;
 
         // More Weather Details appear on the console
-        console.log(data);
     } catch (error) {
         // Throw error if needed
         throw error;

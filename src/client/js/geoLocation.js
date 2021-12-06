@@ -99,13 +99,16 @@ async function updateUI(data) {
     // console.log(":: updateUI(data)");
 
     try {
+
         document.getElementById("travel-date").innerHTML = travelDate || "(Date Not Set)";
         document.getElementById("city").innerHTML = data.geonames[0].name;
-        document.getElementById("country-code").innerHTML = data.geonames[0].countryCode;
+        document.getElementById("country-code").innerHTML = data.geonames[0].countryName;
         document.getElementById("longitude").innerHTML = data.geonames[0].lng;
         document.getElementById("latitude").innerHTML = data.geonames[0].lat;
         document.getElementById("population").innerHTML = numeral(data.geonames[0].population).format('0,0');
 
+
+        // console.log(data);
     } catch (error) {
         // console.log('Error in updateUI()', error);
         throw error;
