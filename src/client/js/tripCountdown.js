@@ -39,7 +39,7 @@ const updateUI = (date) => {
 
 let date = document.getElementById("departDate")
 console.log(null)
-console.log(departDate)
+console.log(date)
     // create event listener for the "let's go" button 
 document.getElementById("generate").addEventListener("click", tripCountdown(date));
 
