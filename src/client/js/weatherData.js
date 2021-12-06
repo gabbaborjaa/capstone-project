@@ -2,12 +2,13 @@
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
 const API_KEY = '08982352a66d46d5b0bbd4919b860415';
 
-/**
- * Validate the input text.
- * 
- * @param {*} input 
- * @returns true if the input is valid, false otherwise
- */
+const metricSign = '&#8457;'
+    /**
+     * Validate the input text.
+     * 
+     * @param {*} input 
+     * @returns true if the input is valid, false otherwise
+     */
 function validateInput(input) {
     // console.log(":: validateInput(input)");
 
@@ -33,9 +34,10 @@ async function fetchWeatherData(input) {
 
         try {
 
-            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}`;
+            // const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}`;
 
-            const response = await fetch(`${PARAM_URL}`);
+            // const response = await fetch(`${PARAM_URL}`);
+            const response = await fetch(`${API_URL}&city=${encodedInput}&key=${API_KEY}&units=I`);
 
             if (!response.ok) {
 
@@ -68,7 +70,8 @@ async function updateUI(data) {
         // Weather Data Function & Metric Unit
         let weatherData = data.data[0].app_temp
 
-        document.getElementById("weather").innerHTML = `${weatherData}`;
+        document.getElementById("weather").innerHTML = `${weatherData} ${metricSign}`;
+
         // More Weather Details appear on the console
         console.log(data);
     } catch (error) {
