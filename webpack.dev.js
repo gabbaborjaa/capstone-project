@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const DotEnv = require('dotenv-webpack');
+const Dotenv = require('dotenv-webpack');
 
 
 module.exports = {
@@ -68,7 +68,7 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
-        new DotEnv(),
+        new Dotenv(),
 
     ]
 }

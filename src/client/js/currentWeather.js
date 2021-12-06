@@ -1,6 +1,6 @@
 // API URL & Key // 
 const weatherbitUrl = 'https://api.weatherbit.io/v2.0/current';
-const weatherbitApi = '4e5f8ac1e15047d6aac9f136cfe47d89';
+const weatherbitApi = process.env.WEATHERBIT_KEY;
 
 // Server to post Data //
 const server = "http://localhost:6000";

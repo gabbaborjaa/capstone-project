@@ -1,3 +1,12 @@
 // API URL & Key //
-const pixabayUrl = 'https://pixabay.com/api/';
-const pixabayAPI = '24044755 -a62cdb573febb8cf6a36ce4fe';
+const API_URL = 'https://pixabay.com/api/';
+const API_KEY = process.env.PIXABAY_KEY;
+
+/**
+ * 
+ * @param {*} input 
+ * 
+ * @returns picture data
+ */
+
+console.log(process.env.PIXABAY_KEY)

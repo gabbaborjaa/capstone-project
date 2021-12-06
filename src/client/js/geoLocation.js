@@ -4,7 +4,7 @@ import parseISO from 'date-fns/parseISO';
 
 const API_METHOD = 'search';
 const API_URL = `http://api.geonames.org/${API_METHOD}`;
-const API_KEY = "gabbaborjaa";
+const API_KEY = process.env.GEONAMES_KEY;
 
 const PARAM_TYPE = 'json';
 const PARAM_MAXROWS = 10;

@@ -1,3 +1,4 @@
+// API URL & Key
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
 const API_KEY = '08982352a66d46d5b0bbd4919b860415';
 
