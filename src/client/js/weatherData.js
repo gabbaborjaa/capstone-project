@@ -1,7 +1,6 @@
 // API URL & Key
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
-const API_KEY = process.env.WEATHERBIT_KEY;
-const weatherbitAPI = API_KEY;
+const API_KEY = '08982352a66d46d5b0bbd4919b860415';
 
 // Degree Fahrenheit Symbol
 const metricSign = '&#8457;'
@@ -41,7 +40,7 @@ async function fetchWeatherData(input) {
             // const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}`;
 
             // const response = await fetch(`${PARAM_URL}`);
-            const response = await fetch(`${API_URL}&city=${encodedInput}&key=${weatherbitAPI}&units=I`);
+            const response = await fetch(`${API_URL}&city=${encodedInput}&key=${API_KEY}&units=I`);
 
             if (!response.ok) {
 
