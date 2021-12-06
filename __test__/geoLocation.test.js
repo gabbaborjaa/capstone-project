@@ -1,0 +1,1 @@
+import { fetchGeoData } from '..src/client/js/geoLocaton.js'
