@@ -9,6 +9,8 @@
 // this function will return the difference in number of days from the current date to the future date
 const tripCountdown = (date) => {
 
+    //updateUI(date);
+
     const timerDetails = document.getElementById('timer');
 
     const now = new Date();
@@ -18,6 +20,7 @@ const tripCountdown = (date) => {
     const minutes = Math.floor((difference / 1000 / 60) % 60);
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
 
     // Have the description show up with the countdown in the sentence.
     timerDetails.innerHTML = `
@@ -29,12 +32,15 @@ const tripCountdown = (date) => {
 const updateUI = (date) => {
     const departureDetails = document.querySelector('.timer');
 
-    departureDetails.innerHTML = date;
+    //departureDetails.innerHTML = date;
 
     return data;
 }
 
-// create event listener for the "let's go" button 
-document.getElementById("generate").addEventListener("click", tripCountdown);
+let date = document.getElementById("departDate")
+console.log(null)
+console.log(departDate)
+    // create event listener for the "let's go" button 
+document.getElementById("generate").addEventListener("click", tripCountdown(date));
 
 export { tripCountdown }

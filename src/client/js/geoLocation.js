@@ -122,7 +122,7 @@ function getGeoNames() {
     // get the input text from the input textarea
     const input = document.getElementById("destination").value;
 
-    let date = document.getElementById("date").value;
+    let date = document.getElementById("departDate").value;
 
     // format the date
     travelDate = date ? format(parseISO(date), 'MM/dd/yyyy') : '';
