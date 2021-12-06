@@ -64,8 +64,12 @@ async function updateUI(data) {
     //
 
     try {
-        document.getElementById("weather").innerHTML = data.data[0].app_temp;
+        // Weather Data Function & Metric Unit
+        let weatherData = data.data[0].app_temp
 
+        document.getElementById("weather").innerHTML = `${weatherData}`;
+        // More Weather Details appear on the console
+        console.log(data);
     } catch (error) {
         // Throw error if needed
         throw error;
