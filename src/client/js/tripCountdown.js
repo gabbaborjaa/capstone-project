@@ -7,9 +7,10 @@
 
 // Pass in a date in the future
 // this function will return the difference in number of days from the current date to the future date
-const tripCountdown = (date) => {
+function tripCountdown() {
+    let date = document.getElementById("departDate").value
 
-    //updateUI(date);
+    console.log(date)
 
     const timerDetails = document.getElementById('timer');
 
@@ -37,10 +38,7 @@ const updateUI = (date) => {
     return data;
 }
 
-let date = document.getElementById("departDate")
-console.log(null)
-console.log(date)
-    // create event listener for the "let's go" button 
-document.getElementById("generate").addEventListener("click", tripCountdown(date));
+// create event listener for the "let's go" button 
+document.getElementById("generate").addEventListener("click", tripCountdown);
 
 export { tripCountdown }
