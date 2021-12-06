@@ -2,13 +2,16 @@
 const API_URL = 'https://api.weatherbit.io/v2.0/current?';
 const API_KEY = '08982352a66d46d5b0bbd4919b860415';
 
+// Degree Fahrenheit Symbol
 const metricSign = '&#8457;'
-    /**
-     * Validate the input text.
-     * 
-     * @param {*} input 
-     * @returns true if the input is valid, false otherwise
-     */
+
+
+/**
+ * Validate the input text.
+ * 
+ * @param {*} input 
+ * @returns true if the input is valid, false otherwise
+ */
 function validateInput(input) {
     // console.log(":: validateInput(input)");
 
