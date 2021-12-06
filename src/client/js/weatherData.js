@@ -32,7 +32,7 @@ async function fetchWeatherData(input) {
 
         try {
 
-            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}&include=minutely`;
+            const PARAM_URL = `${API_URL}&city=${encodedInput}&key=${API_KEY}`;
 
             const response = await fetch(`${PARAM_URL}`);
 
@@ -64,7 +64,7 @@ async function updateUI(data) {
     //
 
     try {
-        document.getElementById("weather").innerHTML = data;
+        document.getElementById("weather").innerHTML = data.data[0].app_temp;
 
     } catch (error) {
         // Throw error if needed
