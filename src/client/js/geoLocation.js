@@ -56,7 +56,6 @@ async function fetchGeoData(input) {
 
             const PARAM_URL = `${API_URL}?q=${encodedInput}&type=${PARAM_TYPE}&maxRows=${PARAM_MAXROWS}&style=${PARAM_STYLE}&lang=${PARAM_LANG}&username=${PARAM_USERNAME}&formatted=${PARAM_FORMATTED}`;
 
-            // call the MeaningCloud API with the form data/options in an async way
             // const response = await fetch(API_URL, fetchRequestOptions);
             const response = await fetch(`${PARAM_URL}`);
 
