@@ -1,5 +1,3 @@
-import { monthsToYears } from "date-fns";
-
 // API URL & Key //
 const API_URL = 'https://pixabay.com/api/?';
 const API_KEY = process.env.PIXABAY_KEY;
@@ -53,18 +51,18 @@ async function fetchPixabayPicture(input) {
 /**
  * Display results on the UI
  * 
- * @param {*} results
+ * @param {*} results from service to page
  * 
  */
 async function updateUI(data) {
 
     try {
 
-        let pixabayData = data.hits[0].webformatURL
+        const pixabayData = data.hits[0].webformatURL
         const image = pixabayData
 
         // document.getElementById("image").innerHTML = data.hits[0].webformatURL
-        document.querySelector("image").innerHTML = `url(${image})`;
+        document.querySelector("img").innerHTML = `url(${pixabayData})`;
 
         console.log(data.hits[0].webformatURL);
     } catch (error) {
