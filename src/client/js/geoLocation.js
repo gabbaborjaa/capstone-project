@@ -100,12 +100,20 @@ async function updateUI(data) {
 
     try {
 
+        const geoname = data.geonames[0].name;
+        const countryName = data.geonames[0].countryName;
+        const longtitude = data.geonames[0].lng;
+        const latitude = data.geonames[0].lat;
+        const population = numeral(data.geonames[0].population).format('0,0');
+
+
+
         document.getElementById("travel-date").innerHTML = travelDate || "(Date Not Set)";
-        document.getElementById("city").innerHTML = data.geonames[0].name;
-        document.getElementById("country-code").innerHTML = data.geonames[0].countryName;
-        document.getElementById("longitude").innerHTML = data.geonames[0].lng;
-        document.getElementById("latitude").innerHTML = data.geonames[0].lat;
-        document.getElementById("population").innerHTML = numeral(data.geonames[0].population).format('0,0');
+        document.getElementById("city").innerHTML = `City: ${geoname}`;
+        document.getElementById("country-code").innerHTML = `Country: ${countryName}`;
+        document.getElementById("longitude").innerHTML = `Longtitude: ${longtitude}`;
+        document.getElementById("latitude").innerHTML = `Latitude: ${latitude}`;
+        document.getElementById("population").innerHTML = `Population: ${population}`;
 
 
         // console.log(data);

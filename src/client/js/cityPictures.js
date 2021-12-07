@@ -59,12 +59,13 @@ async function updateUI(data) {
     try {
 
         const pixabayData = data.hits[0].webformatURL
-        const image = pixabayData
+        const imageUrl = pixabayData
 
         // document.getElementById("image").innerHTML = data.hits[0].webformatURL
         document.querySelector("img").innerHTML = `url(${pixabayData})`;
 
-        document.getElementById("pixabay-img").innerHTML = data.hits[0].webformatURL;
+        // document.getElementById("pixabay-picture").innerHTML = imageUrl;
+
         console.log(data.hits[0].webformatURL);
 
 

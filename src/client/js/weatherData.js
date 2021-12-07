@@ -74,7 +74,7 @@ async function updateUI(data) {
         // Weather Data Function & Metric Unit
         let weatherData = data.data[0].app_temp
 
-        document.getElementById("weather").innerHTML = `${weatherData} ${metricSign}`;
+        document.getElementById("weather").innerHTML = `Weather: ${weatherData} ${metricSign}`;
 
         // More Weather Details appear on the console
     } catch (error) {
