@@ -18,6 +18,7 @@ const request = supertest(app)
 app.get('/test', async(req, res) => {
     res.json({ message: 'pass!' })
 })
+module.exports = app
 
 // Server Name & Port //
 const serverPort = 6000;

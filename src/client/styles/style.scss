@@ -7,12 +7,11 @@
     }
     
     #app {
-        display: grid;
-        /* grid-auto-rows: minmax(auto, 50px); */
-        /* grid-template-columns:  */
+        display: flex;
+        grid-auto-rows: minmax(auto, );
+        grid-template-columns: auto;
         flex-direction: column;
         background: white;
-        /* color: #f0d43a; */
         justify-content: center;
         grid-gap: 1em;
         font-size: 20px;
@@ -21,6 +20,11 @@
         height: 100%;
         border-radius: 40px;
         margin: 0;
+    }
+    
+    table {
+        max-width: 800px;
+        margin: 50px auto;
     }
     
     .subtitle {
@@ -153,4 +157,68 @@
         /* Microsoft Edge */
         /* color: #f0d43a; */
         font-family: 'Source Serif Pro', sans-serif;
+    }
+    
+    // Smaller Screen
+    @media(max-width:600px) {
+        #app {
+            display: flex;
+            padding: 5px;
+            // grid-template-columns: 1fr;
+            // grid-template-rows: 350px 350px 735px 45px;
+        }
+        body {
+            display: flex;
+            background: rgb(136, 203, 171);
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        // table {
+        //     padding: 5px;
+        // }
+        // img {
+        //     height: 250px;
+        //     width: 350px;
+        // }
+        .title {
+            grid-area: cat;
+            display: grid;
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+    /* Medium Screens */
+    
+    @media(min-width:600px) and (max-width:900px) {
+        .container {
+            display: grid;
+            grid-template-columns: 200px 250px;
+            grid-template-rows: 350px 350px 735px 45px;
+            grid-template-areas: "top top top top" "cat cat cat cat" "middle middle middle middle" "btm btm btm btm";
+        }
+        .box {
+            display: grid;
+            background: #f5f5f5;
+            color: black;
+            font-size: 40px;
+            font-family: Benton Sans, sans-serif;
+            justify-content: center;
+            border: 1px solid red;
+        }
+        .text-wrap {
+            background: #f5f5f5;
+            font-size: 15px;
+            font-family: Raleway, sans-serif;
+            margin: 10px;
+            padding: 5px;
+            width: 100px
+        }
+        // .title {
+        //     grid-area: cat;
+        //     display: grid;
+        //     font-size: 35px;
+        //     text-align: center;
+        // }    
     }
