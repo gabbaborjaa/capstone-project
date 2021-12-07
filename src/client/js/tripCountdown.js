@@ -10,8 +10,6 @@
 function tripCountdown() {
     let date = document.getElementById("departDate").value
 
-    console.log(date)
-
     const timerDetails = document.getElementById('timer');
 
     const now = new Date();
@@ -26,15 +24,6 @@ function tripCountdown() {
     // Have the description show up with the countdown in the sentence.
     timerDetails.innerHTML = `Your trip is ${days} <span class="bold">Days </span> ${hours} <span class="bold">Hours</span> ${minutes} <span class="bold">Minutes</span> away!`;
 }
-
-// // Show the countdown on the UI
-// const updateUI = (date) => {
-//     const departureDetails = document.querySelector('.timer');
-
-//     //departureDetails.innerHTML = date;
-
-//     return data;
-// }
 
 // create event listener for the "let's go" button 
 
