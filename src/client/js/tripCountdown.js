@@ -22,7 +22,7 @@ function tripCountdown() {
 
 
     // Have the description show up with the countdown in the sentence.
-    timerDetails.innerHTML = `Your trip is ${days} <span class="bold">Days </span> ${hours} <span class="bold">Hours</span> ${minutes} <span class="bold">Minutes</span> away!`;
+    timerDetails.innerHTML = `Your trip is ${days} <span class="bold"> Days </span> ${hours} <span class="bold">Hours</span> ${minutes} <span class="bold">Minutes</span> away.`;
 }
 
 // create event listener for the "let's go" button 
