@@ -95,11 +95,17 @@
         display: block;
         height: 30px;
         width: 320px;
-        /* background: #eee; */
         font-size: 16px;
         font-family: 'Source Serif Pro', sans-serif;
         border: 1px solid #ccc;
         padding: 4px;
+    }
+    
+    .main-image {
+        margin-top: 40px;
+        img {
+            width: 100%;
+        }
     }
     
     button {
