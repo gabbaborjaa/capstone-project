@@ -62,7 +62,7 @@ async function updateUI(data) {
         const imageUrl = pixabayData
 
         // document.getElementById("image").innerHTML = data.hits[0].webformatURL
-        document.querySelector("img").innerHTML = `url(${pixabayData})`;
+        document.getElementById("picture").innerHTML = imageUrl;
 
         // document.getElementById("pixabay-picture").innerHTML = imageUrl;
 
