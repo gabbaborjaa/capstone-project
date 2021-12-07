@@ -73,8 +73,11 @@ async function updateUI(data) {
     try {
         // Weather Data Function & Metric Unit
         let weatherData = data.data[0].app_temp
+        let weatherIcon = data.data[0].weather.icon
 
         document.getElementById("weather").innerHTML = `Weather: ${weatherData} ${metricSign}`;
+        // document.getElementById("weather-icon").setAttribute("src", weatherIcon);
+        // console.log(data.data[0].weather.icon)
 
         // More Weather Details appear on the console
     } catch (error) {
