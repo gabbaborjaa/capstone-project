@@ -59,11 +59,14 @@ async function fetchPixabayPicture(input) {
 async function updateUI(data) {
 
     try {
-        var cityPicture = new Image(100, 200);
 
-        let pictureData = data
-        document.getElementById("image").innerHTML = data.hits[0].webformatURL
+        let pixabayData = data.hits[0].webformatURL
+        const image = pixabayData
 
+        // document.getElementById("image").innerHTML = data.hits[0].webformatURL
+        document.querySelector("image").backgroundImage = `url(${image})`;
+
+        console.log(data.hits[0].webformatURL);
     } catch (error) {
 
         throw error;
