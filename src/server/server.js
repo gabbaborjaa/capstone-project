@@ -10,10 +10,14 @@ const cors = require('cors');
 const app = express();
 app.use(express.static('dist'));
 
-// API Keys from .env //
-const weatherbitAPI = process.env.API_Weatherbit;
-const pixabayAPI = process.env.API_Pixabay;
-const geonamesAPI = process.env.API_Geonames;
+// Supertest
+const app = require('./server.js') // Link to your server file
+const supertest = require('supertest')
+const request = supertest(app)
+
+app.get('/test', async(req, res) => {
+    res.json({ message: 'pass!' })
+})
 
 // Server Name & Port //
 const serverPort = 6000;

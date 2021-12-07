@@ -1,4 +1,7 @@
-// This passes because 1 === 1
-it('Testing to see if Jest works', () => {
-    expect(1).toBe(1)
+it('Gets the test endpoint', async done => {
+    // Sends GET Request to /test endpoint
+    const res = await request.get('/test')
+
+    // ...
+    done()
 })
