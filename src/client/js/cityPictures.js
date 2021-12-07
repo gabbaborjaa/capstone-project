@@ -64,7 +64,7 @@ async function updateUI(data) {
         // document.getElementById("image").innerHTML = data.hits[0].webformatURL
         document.getElementById("pixabay-img").setAttribute("src", imageUrl);
 
-        console.log(data.hits[0].webformatURL);
+        // console.log(data.hits[0].webformatURL);
 
 
     } catch (error) {
