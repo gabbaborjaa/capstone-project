@@ -106,17 +106,17 @@ async function updateUI(data) {
         const latitude = data.geonames[0].lat;
         const population = numeral(data.geonames[0].population).format('0,0');
 
-
+        let metricSymbol = '&#176;';
 
         document.getElementById("travel-date").innerHTML = travelDate || "(Date Not Set)";
         document.getElementById("city").innerHTML = `City: ${geoname}`;
         document.getElementById("country-code").innerHTML = `Country: ${countryName}`;
-        document.getElementById("longitude").innerHTML = `Longtitude: ${longtitude}`;
-        document.getElementById("latitude").innerHTML = `Latitude: ${latitude}`;
+        document.getElementById("longitude").innerHTML = `Longtitude: ${longtitude} ${metricSymbol}`;
+        document.getElementById("latitude").innerHTML = `Latitude: ${latitude} ${metricSymbol}`;
         document.getElementById("population").innerHTML = `Population: ${population}`;
 
 
-        // console.log(data);
+        console.log(data);
     } catch (error) {
         // console.log('Error in updateUI()', error);
         throw error;
