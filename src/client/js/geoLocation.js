@@ -116,7 +116,7 @@ async function updateUI(data) {
         document.getElementById("population").innerHTML = `Population: ${population}`;
 
 
-        console.log(data);
+        // console.log(data);
     } catch (error) {
         // console.log('Error in updateUI()', error);
         throw error;
