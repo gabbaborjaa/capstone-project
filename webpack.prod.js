@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 const DotEnv = require('dotenv-webpack');
-const { GenerateSW } = require('workbox-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: './src/client/index.js',
@@ -74,7 +74,7 @@ module.exports = {
         new DotEnv(),
         // generate the service worker file
         // NOTE: use this plugin only in production mode - Service Worker requires HTTPS/secure connection
-        new GenerateSW({
+        new WorkboxPlugin.GenerateSW({
             // these options encourage the ServiceWorkers to get in there fast
             // and not allow any straggling "old" SWs to hang around
             clientsClaim: true,
