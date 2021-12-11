@@ -10,7 +10,6 @@ const cors = require('cors');
 const app = express();
 app.use(express.static('dist'));
 
-
 // Server Name & Port //
 const serverPort = 6000;
 const serverName = "localhost";
