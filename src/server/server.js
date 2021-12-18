@@ -10,13 +10,14 @@ const cors = require('cors');
 const app = express();
 app.use(express.static('dist'));
 
+
 // Server Name & Port //
-const serverPort = 6000;
+const serverPort = 7000;
 const serverName = "localhost";
 
 // Server Listening Function // 
 function listening() {
-    console.log(`Server running on ${serverName}: ${serverPort}`);
+    console.log(`Server running on ${serverName}:${serverPort}`);
 }
 
 function getData(req, res) {
@@ -41,7 +42,6 @@ app.use(bodyParser.json());
 app.use(cors());
 // initialize main project folder //
 app.use(express.static('src'));
-
 
 //  Routes //
 app.get("/all", getData);
