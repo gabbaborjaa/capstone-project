@@ -6,7 +6,7 @@ Capstone Project for Udacity Front-End Web Development Nanodegree Program
 A travel application that helps users see the weather of their destination as well as the date of travel.
 
 
-## Version 2.57 ##
+## Version 3.0 ##
 
 Final project consists of all skills learned through the Nanodegree Program in Udacity.
 
